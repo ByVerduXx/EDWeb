@@ -14,6 +14,7 @@ class Nodo
         Nodo *siguiente;
         friend class Pila;
         friend class Cola;
+        friend class Lista;
 
 };
 typedef Nodo *pnodo;

@@ -23,3 +23,36 @@
 1605615815 c:\users\dani\documents\github\edweb\gestionweb\include\cola.h
 	"Nodo.h"
 
+1605728047 source:c:\users\javie\desktop\github\edweb\gestionweb\main.cpp
+	<iostream>
+	"Nodo.h"
+	"Pila.h"
+	"Lista.h"
+
+1605725711 c:\users\javie\desktop\github\edweb\gestionweb\include\nodo.h
+	<iostream>
+
+1605706334 c:\users\javie\desktop\github\edweb\gestionweb\include\pila.h
+	"Nodo.h"
+
+1605727780 source:c:\users\javie\desktop\github\edweb\gestionweb\src\cola.cpp
+	"Cola.h"
+	<iostream>
+
+1605706334 c:\users\javie\desktop\github\edweb\gestionweb\include\cola.h
+	"Nodo.h"
+
+1605706334 source:c:\users\javie\desktop\github\edweb\gestionweb\src\nodo.cpp
+	"Nodo.h"
+
+1605706334 source:c:\users\javie\desktop\github\edweb\gestionweb\src\pila.cpp
+	"Pila.h"
+	<iostream>
+
+1605728131 source:c:\users\javie\desktop\github\edweb\gestionweb\src\lista.cpp
+	"Lista.h"
+	"iostream"
+
+1605726224 c:\users\javie\desktop\github\edweb\gestionweb\include\lista.h
+	"Nodo.h"
+
