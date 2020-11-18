@@ -81,12 +81,7 @@ void Lista::eult(){
 
 }
 bool Lista::es_vacia(){
-    if(longitud>0){
-        return false;
-    }
-    else{
-        return true;
-    }
+    return(longitud == 0);
 }
 int Lista::prim(){
     return primero->ped;
