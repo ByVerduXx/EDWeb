@@ -1,25 +1,27 @@
 # depslib dependency file v1.0
-1605615839 source:c:\users\dani\documents\github\edweb\gestionweb\main.cpp
+1605727377 source:c:\users\dani\documents\github\edweb\gestionweb\main.cpp
 	<iostream>
 	"Nodo.h"
 	"Pila.h"
-
-1605614329 source:c:\users\dani\documents\github\edweb\gestionweb\src\nodo.cpp
-	"Nodo.h"
-
-1605615548 c:\users\dani\documents\github\edweb\gestionweb\include\nodo.h
-	<iostream>
-
-1605616322 source:c:\users\dani\documents\github\edweb\gestionweb\src\pila.cpp
-	"Pila.h"
-	<iostream>
-
-1605615094 c:\users\dani\documents\github\edweb\gestionweb\include\pila.h
-	"Nodo.h"
-
-1605615384 source:c:\users\dani\documents\github\edweb\gestionweb\src\cola.cpp
 	"Cola.h"
 
-1605615815 c:\users\dani\documents\github\edweb\gestionweb\include\cola.h
+1605726824 source:c:\users\dani\documents\github\edweb\gestionweb\src\nodo.cpp
+	"Nodo.h"
+
+1605726824 c:\users\dani\documents\github\edweb\gestionweb\include\nodo.h
+	<iostream>
+
+1605726824 source:c:\users\dani\documents\github\edweb\gestionweb\src\pila.cpp
+	"Pila.h"
+	<iostream>
+
+1605726824 c:\users\dani\documents\github\edweb\gestionweb\include\pila.h
+	"Nodo.h"
+
+1605727499 source:c:\users\dani\documents\github\edweb\gestionweb\src\cola.cpp
+	"Cola.h"
+	<iostream>
+
+1605726824 c:\users\dani\documents\github\edweb\gestionweb\include\cola.h
 	"Nodo.h"
 

@@ -47,5 +47,5 @@ int Cola::ult(){
     return ultimo->ped;
 }
 bool Cola::esVacia(){
-    return ((primero == NULL) && (ultimo == NULL));
+    return (primero == NULL);
 }
