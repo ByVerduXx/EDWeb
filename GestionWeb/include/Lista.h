@@ -1,6 +1,7 @@
 #ifndef LISTA_H
 #define LISTA_H
 #include "Nodo.h"
+#include "Pedido.h"
 
 class Lista
 {
@@ -17,12 +18,12 @@ class Lista
         bool es_vacia();//Comprueba si una lista es vacia
         int prim(); //Devuelve el primer elemento de la lista
         int ult(); //Devuelve el ultimo elemento de la lista
-        int lon();
+        int lon();//Devuelve la longitud de la lista
 
     private:
-        pnodo primero;
-        pnodo ultimo;
-        int longitud;
+        pnodo primero; //Puntero al primer elemento de la lista
+        pnodo ultimo;  //Puntero al ultimo elemento de la lista
+        int longitud;  // Mide la longitud de la lista
 
 };
 

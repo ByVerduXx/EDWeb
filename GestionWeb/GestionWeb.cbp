@@ -37,11 +37,13 @@
 		<Unit filename="include/Cola.h" />
 		<Unit filename="include/Lista.h" />
 		<Unit filename="include/Nodo.h" />
+		<Unit filename="include/Pedido.h" />
 		<Unit filename="include/Pila.h" />
 		<Unit filename="main.cpp" />
 		<Unit filename="src/Cola.cpp" />
 		<Unit filename="src/Lista.cpp" />
 		<Unit filename="src/Nodo.cpp" />
+		<Unit filename="src/Pedido.cpp" />
 		<Unit filename="src/Pila.cpp" />
 		<Extensions>
 			<lib_finder disable_auto="1" />

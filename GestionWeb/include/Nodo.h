@@ -1,6 +1,7 @@
 #ifndef NODO_H
 #define NODO_H
 #include <iostream>
+#include "Pedido.h"
 
 class Nodo
 {

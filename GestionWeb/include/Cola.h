@@ -1,6 +1,7 @@
 #ifndef COLA_H
 #define COLA_H
 #include "Nodo.h"
+#include "Pedido.h"
 
 class Cola
 {

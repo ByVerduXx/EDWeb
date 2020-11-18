@@ -1,6 +1,7 @@
 #ifndef PILA_H
 #define PILA_H
 #include "Nodo.h"
+#include "Pedido.h"
 
 class Pila
 {
