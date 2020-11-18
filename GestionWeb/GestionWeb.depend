@@ -25,7 +25,7 @@
 1605726824 c:\users\dani\documents\github\edweb\gestionweb\include\cola.h
 	"Nodo.h"
 
-1605728047 source:c:\users\javie\desktop\github\edweb\gestionweb\main.cpp
+1605728736 source:c:\users\javie\desktop\github\edweb\gestionweb\main.cpp
 	<iostream>
 	"Nodo.h"
 	"Pila.h"
@@ -51,11 +51,11 @@
 	"Pila.h"
 	<iostream>
 
-1605728131 source:c:\users\javie\desktop\github\edweb\gestionweb\src\lista.cpp
+1605728736 source:c:\users\javie\desktop\github\edweb\gestionweb\src\lista.cpp
 	"Lista.h"
 	"iostream"
 
-1605726224 c:\users\javie\desktop\github\edweb\gestionweb\include\lista.h
+1605737640 c:\users\javie\desktop\github\edweb\gestionweb\include\lista.h
 	"Nodo.h"
 
 1605728677 source:c:\users\dani\documents\github\edweb\gestionweb\src\lista.cpp

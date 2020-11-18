@@ -17,10 +17,12 @@ class Lista
         bool es_vacia();//Comprueba si una lista es vacia
         int prim(); //Devuelve el primer elemento de la lista
         int ult(); //Devuelve el ultimo elemento de la lista
+        int lon();
 
     private:
         pnodo primero;
         pnodo ultimo;
+        int longitud;
 
 };
 

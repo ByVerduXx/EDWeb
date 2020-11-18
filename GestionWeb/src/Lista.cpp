@@ -4,6 +4,7 @@ Lista::Lista()
 {
     primero = NULL;
     ultimo = NULL;
+    longitud = 0;
 }
 
 Lista::~Lista()
@@ -21,6 +22,7 @@ void Lista::insertarIzq(int p){
         nuevo->siguiente = primero;
         primero= nuevo;
     }
+    longitud++;
 }
 
 void Lista::insertarDer(int p){
@@ -34,6 +36,7 @@ void Lista::insertarDer(int p){
         nuevo->siguiente = NULL;
         ultimo= nuevo;
     }
+    longitud++;
 }
 void Lista::insertarOrdenado(int p){
 
@@ -53,6 +56,7 @@ void Lista::resto(){
             borrar->siguiente = NULL;
             delete(borrar);
         }
+        longitud--;
     }
 
 }
@@ -72,15 +76,24 @@ void Lista::eult(){
             p->siguiente = NULL;
             delete(aux);
         }
+        longitud--;
     }
 
 }
 bool Lista::es_vacia(){
-    return (primero==NULL);
+    if(longitud>0){
+        return false;
+    }
+    else{
+        return true;
+    }
 }
 int Lista::prim(){
     return primero->ped;
 }
 int Lista::ult(){
     return ultimo->ped;
+}
+int Lista::lon(){
+    return longitud;
 }
