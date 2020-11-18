@@ -57,22 +57,20 @@ void Lista::resto(){
 
 }
 void Lista::eult(){
+    pnodo p,aux;
     if(!es_vacia()){
-        pnodo borrar = ultimo;
-        pnodo aux = primero;
-        if ((primero==ultimo) && (primero->siguiente = NULL)){
-            primero=NULL;
-            ultimo=NULL;
-            borrar->siguiente = NULL;
-            delete(borrar);
+        p = primero;
+        if(p->siguiente == NULL){
+            primero = NULL;
+            delete(p);
         }
         else{
-            while(aux->siguiente !=ultimo){
-                aux= aux->siguiente;
+            while (p->siguiente->siguiente != NULL){
+                p = p->siguiente;
             }
-            ultimo = aux;
-            borrar->siguiente = NULL;
-            delete(borrar);
+            aux = p->siguiente;
+            p->siguiente = NULL;
+            delete(aux);
         }
     }
 

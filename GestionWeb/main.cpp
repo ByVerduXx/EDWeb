@@ -6,7 +6,7 @@ using namespace std;
 
 int main()
 {
-    cout << "Hola pepo" << endl;
+    cout << "Hola buenas" << endl;
     Lista l;
     l.insertarIzq(3);
     l.insertarDer(4);
@@ -14,7 +14,7 @@ int main()
     cout << l.ult() << endl;
     l.eult();
     cout << l.es_vacia() << endl;
-    l.eult();
+    l.resto();
     cout << l.es_vacia() << endl;
     return 0;
 }
