@@ -19,6 +19,7 @@ void Cola::encolar(int p){
         ultimo = nuevo;
     }
     else{
+        ultimo->siguiente = nuevo;
         ultimo = nuevo;
     }
     longitud++;
@@ -48,4 +49,12 @@ int Cola::ult(){
 }
 bool Cola::esVacia(){
     return  (primero==NULL);
+}
+void Cola::verCola(){
+    pnodo aux = primero;
+    while(aux != NULL){
+        cout << aux->ped << endl;                               //implementar pediodos es ped.to_string
+        cout << "-------------------" << endl;
+        aux = aux->siguiente;
+    }
 }

@@ -19,6 +19,7 @@ class Lista
         int prim(); //Devuelve el primer elemento de la lista
         int ult(); //Devuelve el ultimo elemento de la lista
         int lon();//Devuelve la longitud de la lista
+        void verLista(); //funcion hecha con fines de comprension de la practica
 
     private:
         pnodo primero; //Puntero al primer elemento de la lista

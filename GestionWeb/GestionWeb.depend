@@ -1,29 +1,33 @@
 # depslib dependency file v1.0
-1605728307 source:c:\users\dani\documents\github\edweb\gestionweb\main.cpp
+1605823377 source:c:\users\dani\documents\github\edweb\gestionweb\main.cpp
 	<iostream>
 	"Nodo.h"
 	"Pila.h"
+	"Cola.h"
 	"Lista.h"
 
 1605726824 source:c:\users\dani\documents\github\edweb\gestionweb\src\nodo.cpp
 	"Nodo.h"
 
-1605728242 c:\users\dani\documents\github\edweb\gestionweb\include\nodo.h
+1605821711 c:\users\dani\documents\github\edweb\gestionweb\include\nodo.h
 	<iostream>
+	"Pedido.h"
 
-1605726824 source:c:\users\dani\documents\github\edweb\gestionweb\src\pila.cpp
+1605823256 source:c:\users\dani\documents\github\edweb\gestionweb\src\pila.cpp
 	"Pila.h"
 	<iostream>
 
-1605726824 c:\users\dani\documents\github\edweb\gestionweb\include\pila.h
+1605822661 c:\users\dani\documents\github\edweb\gestionweb\include\pila.h
 	"Nodo.h"
+	"Pedido.h"
 
-1605728242 source:c:\users\dani\documents\github\edweb\gestionweb\src\cola.cpp
+1605823257 source:c:\users\dani\documents\github\edweb\gestionweb\src\cola.cpp
 	"Cola.h"
 	<iostream>
 
-1605726824 c:\users\dani\documents\github\edweb\gestionweb\include\cola.h
+1605822798 c:\users\dani\documents\github\edweb\gestionweb\include\cola.h
 	"Nodo.h"
+	"Pedido.h"
 
 1605742065 source:c:\users\javie\desktop\github\edweb\gestionweb\main.cpp
 	<iostream>
@@ -58,12 +62,13 @@
 1605740334 c:\users\javie\desktop\github\edweb\gestionweb\include\lista.h
 	"Nodo.h"
 
-1605728677 source:c:\users\dani\documents\github\edweb\gestionweb\src\lista.cpp
+1605823222 source:c:\users\dani\documents\github\edweb\gestionweb\src\lista.cpp
 	"Lista.h"
 	"iostream"
 
-1605728242 c:\users\dani\documents\github\edweb\gestionweb\include\lista.h
+1605823104 c:\users\dani\documents\github\edweb\gestionweb\include\lista.h
 	"Nodo.h"
+	"Pedido.h"
 
 1605742065 source:c:\users\javie\desktop\github\edweb\gestionweb\src\pedido.cpp
 	"Pedido.h"
@@ -72,4 +77,12 @@
 1605741497 c:\users\javie\desktop\github\edweb\gestionweb\include\pedido.h
 	<string.h>
 	<string>
+
+1605822169 c:\users\dani\documents\github\edweb\gestionweb\include\pedido.h
+	<string.h>
+	<string>
+
+1605822193 source:c:\users\dani\documents\github\edweb\gestionweb\src\pedido.cpp
+	"Pedido.h"
+	"iostream"
 

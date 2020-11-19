@@ -47,7 +47,11 @@ string Pedido::getTipo(){
 int Pedido::getPrioridad(){
     return prioridad;
 }
-string Pedido::mostrarPedido(){
-    return nombre+"//"+ncliente+"//"+direccion+"//"+tipo+"//"+tarjeta+"//"+to_string(tiempo);
 
+void Pedido::to_string(){
+    cout << "Producto: " << nombre << endl;
+    cout << "Nombre Cliente: " << ncliente << endl;
+    cout << "Direccion: " << direccion << endl;
+    cout << "Categoria: " << tipo << endl;
+    cout << "Tiempo de preparacion: " << tiempo << " minuto(s)" << endl;
 }

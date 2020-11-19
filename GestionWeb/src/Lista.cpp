@@ -92,3 +92,11 @@ int Lista::ult(){
 int Lista::lon(){
     return longitud;
 }
+void Lista::verLista(){
+    pnodo aux = primero;
+    while(aux != NULL){
+        cout << aux->ped << endl;
+        cout << "-------------------" << endl;
+        aux = aux->siguiente;   //poner ped.to_string
+    }
+}

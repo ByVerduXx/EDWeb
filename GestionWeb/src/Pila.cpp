@@ -26,3 +26,11 @@ void Pila::desapilar(){
 int Pila::mostrarCima(){
     return cima->ped;
 }
+void Pila::verPila(){
+    pnodo aux = cima;
+    while(aux != NULL){
+        cout << aux->ped << endl;//cambiar a ped.to_string una vez hayamos implementado los pedidos
+        cout << "-------------------" << endl;
+        aux = aux->siguiente;
+    }
+}

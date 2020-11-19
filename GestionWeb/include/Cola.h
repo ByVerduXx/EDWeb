@@ -13,6 +13,7 @@ class Cola
         int prim();
         int ult();
         bool esVacia();
+        void verCola();  //funcion hecha con fines de comprension de la practica
     private:
         pnodo primero;
         pnodo ultimo;
