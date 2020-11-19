@@ -7,7 +7,7 @@ using namespace std;
 
 int main()
 {
-    cout << "Hola buenas" << endl;
+    cout << "Hola buenas tardes" << endl;
     Lista l;
     l.insertarIzq(3);
     l.insertarDer(4);

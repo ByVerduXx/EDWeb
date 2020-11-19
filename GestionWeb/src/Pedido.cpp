@@ -1,5 +1,7 @@
 #include "Pedido.h"
 #include "iostream"
+#include <string>
+#include <string.h>
 using namespace std;
 
 //Variables auxiliares para constructores
@@ -9,7 +11,10 @@ string NR ="NR";
 
 Pedido::Pedido(string datos)
 {
-    //Falta por implementar pedidos
+    string n,c,d,tp,tj;
+    int t;
+    string str;
+    size_t posicion = str.find("//");           //pendiente de terminar que me voy a dormir jajajaja
 }
 
 Pedido::Pedido(string n, string c, string d , string tp , string tj, int t){
