@@ -25,6 +25,7 @@ class Pedido
         string tarjeta;
         int tiempo;
         int prioridad;
+        bool erroneo;
         friend class Nodo;
         friend class Pila;
         friend class Cola;

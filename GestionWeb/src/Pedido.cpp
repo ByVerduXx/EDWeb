@@ -19,8 +19,8 @@ Pedido::Pedido(string datos)
     size_t posicion = datos.find("//");
     str = datos.substr(0,posicion);
     n = str;
-    while((contador < 5)){                  // && !str.empty()    : para cuando hagamos los pedidos erroneos
-        datos.erase(0,posicion+2);
+    datos.erase(0,posicion+2);
+    while((contador < 5)){                  // && !datos.empty()    : para cuando hagamos los pedidos erroneos
         posicion = datos.find("//");
         str = datos.substr(0,posicion);
         switch(contador){
@@ -30,6 +30,7 @@ Pedido::Pedido(string datos)
             case(3): tj = str;  break;
             case(4): t = stoi(str); break;
         }
+        datos.erase(0,posicion+2);
         contador++;
     }
     nombre = n;
@@ -43,10 +44,10 @@ Pedido::Pedido(string datos)
             prioridad = 2;
 
     }
-    else if (strcmp(NVIP.c_str(),tp.c_str())){
+    else if (strcmp(NVIP.c_str(),tp.c_str()) == 0){
             prioridad = 1;
     }
-    else if(strcmp(NR.c_str(),tp.c_str())){
+    else if(strcmp(NR.c_str(),tp.c_str()) == 0){
             prioridad = 0;
     }
     else{
@@ -64,20 +65,22 @@ Pedido::Pedido(string n, string c, string d , string tp , string tj, int t){
     tipo=tp;
     tarjeta=tj;
     tiempo = t;
+    erroneo = false;
 
     if(strcmp(VIP.c_str(),tp.c_str()) == 0){
             prioridad = 2;
 
     }
-    else if (strcmp(NVIP.c_str(),tp.c_str())){
+    else if (strcmp(NVIP.c_str(),tp.c_str()) == 0){
             prioridad = 1;
     }
-    else if(strcmp(NVIP.c_str(),tp.c_str())){
+    else if(strcmp(NVIP.c_str(),tp.c_str()) == 0){
             prioridad = 0;
     }
     else{
         tipo = "NR";
         prioridad = 0;
+        erroneo = true;
 
     }
 
