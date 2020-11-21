@@ -8,13 +8,53 @@ using namespace std;
 string VIP = "VIP";
 string NVIP = "NVIP";
 string NR ="NR";
+Pedido::Pedido(){
 
+}
 Pedido::Pedido(string datos)
 {
     string n,c,d,tp,tj;
-    int t;
+    int t,contador = 0;
     string str;
-    size_t posicion = str.find("//");           //pendiente de terminar que me voy a dormir jajajaja
+    size_t posicion = datos.find("//");
+    str = datos.substr(0,posicion);
+    n = str;
+    while((contador < 5)){                  // && !str.empty()    : para cuando hagamos los pedidos erroneos
+        datos.erase(0,posicion+2);
+        posicion = datos.find("//");
+        str = datos.substr(0,posicion);
+        switch(contador){
+            case(0): c = str; break;
+            case(1): d = str; break;
+            case(2): tp = str; break;
+            case(3): tj = str;  break;
+            case(4): t = stoi(str); break;
+        }
+        contador++;
+    }
+    nombre = n;
+    ncliente = c;
+    direccion = d;
+    tipo = tp;
+    tarjeta = tj;
+    tiempo = t;
+
+    if(strcmp(VIP.c_str(),tp.c_str()) == 0){
+            prioridad = 2;
+
+    }
+    else if (strcmp(NVIP.c_str(),tp.c_str())){
+            prioridad = 1;
+    }
+    else if(strcmp(NR.c_str(),tp.c_str())){
+            prioridad = 0;
+    }
+    else{
+        tipo = "NR";
+        prioridad = 0;
+
+    }
+
 }
 
 Pedido::Pedido(string n, string c, string d , string tp , string tj, int t){
@@ -36,8 +76,8 @@ Pedido::Pedido(string n, string c, string d , string tp , string tj, int t){
             prioridad = 0;
     }
     else{
-        cout<<"Error el tipo introducido no es valido"<<endl;
-        prioridad =-1;
+        tipo = "NR";
+        prioridad = 0;
 
     }
 
@@ -59,4 +99,5 @@ void Pedido::to_string(){
     cout << "Direccion: " << direccion << endl;
     cout << "Categoria: " << tipo << endl;
     cout << "Tiempo de preparacion: " << tiempo << " minuto(s)" << endl;
+    cout << "Numero de prioridad: " << prioridad << endl;
 }

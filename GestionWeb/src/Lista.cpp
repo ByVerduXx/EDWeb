@@ -57,8 +57,8 @@ void Lista::insertarOrdenado(Pedido p){
             aux->siguiente = nuevo;
         }
         longitud++;
+    }
 }
-
 void Lista::resto(){
     if(!es_vacia()){
         pnodo borrar = primero;

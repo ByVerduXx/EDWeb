@@ -34,6 +34,8 @@ int main()
     f.encolar(2);
     f.verCola();
     */
+    Pedido p = Pedido("Ordenador//Dani//Calle 32//VIP//124352362626//5");
+    p.to_string();
     return 0;
 }
 // Inserta por la izquierda, muestra prim y ult y resto , derecha ok
