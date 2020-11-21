@@ -39,6 +39,7 @@ Pedido::Pedido(string datos)
     tipo = tp;
     tarjeta = tj;
     tiempo = t;
+    erroneo = false;
 
     if(strcmp(VIP.c_str(),tp.c_str()) == 0){
             prioridad = 2;
@@ -53,6 +54,7 @@ Pedido::Pedido(string datos)
     else{
         tipo = "NR";
         prioridad = 0;
+        erroneo = true;
 
     }
 
