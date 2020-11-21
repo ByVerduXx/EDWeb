@@ -29,38 +29,45 @@
 	"Nodo.h"
 	"Pedido.h"
 
-1605742065 source:c:\users\javie\desktop\github\edweb\gestionweb\main.cpp
+1605971325 source:c:\users\javie\desktop\github\edweb\gestionweb\main.cpp
 	<iostream>
 	"Nodo.h"
 	"Pila.h"
+	"Cola.h"
 	"Lista.h"
 
-1605725711 c:\users\javie\desktop\github\edweb\gestionweb\include\nodo.h
+1605971380 c:\users\javie\desktop\github\edweb\gestionweb\include\nodo.h
 	<iostream>
+	"Pedido.h"
 
-1605706334 c:\users\javie\desktop\github\edweb\gestionweb\include\pila.h
+1605971960 c:\users\javie\desktop\github\edweb\gestionweb\include\pila.h
 	"Nodo.h"
+	"Pedido.h"
 
-1605727780 source:c:\users\javie\desktop\github\edweb\gestionweb\src\cola.cpp
+1605971450 source:c:\users\javie\desktop\github\edweb\gestionweb\src\cola.cpp
 	"Cola.h"
 	<iostream>
+	"Pedido.h"
 
-1605706334 c:\users\javie\desktop\github\edweb\gestionweb\include\cola.h
+1605972065 c:\users\javie\desktop\github\edweb\gestionweb\include\cola.h
 	"Nodo.h"
+	"Pedido.h"
 
 1605706334 source:c:\users\javie\desktop\github\edweb\gestionweb\src\nodo.cpp
 	"Nodo.h"
 
-1605706334 source:c:\users\javie\desktop\github\edweb\gestionweb\src\pila.cpp
+1605973117 source:c:\users\javie\desktop\github\edweb\gestionweb\src\pila.cpp
 	"Pila.h"
 	<iostream>
 
-1605737679 source:c:\users\javie\desktop\github\edweb\gestionweb\src\lista.cpp
+1605971468 source:c:\users\javie\desktop\github\edweb\gestionweb\src\lista.cpp
 	"Lista.h"
 	"iostream"
+	"Pedido.h"
 
-1605740334 c:\users\javie\desktop\github\edweb\gestionweb\include\lista.h
+1605972137 c:\users\javie\desktop\github\edweb\gestionweb\include\lista.h
 	"Nodo.h"
+	"Pedido.h"
 
 1605823222 source:c:\users\dani\documents\github\edweb\gestionweb\src\lista.cpp
 	"Lista.h"
@@ -70,11 +77,13 @@
 	"Nodo.h"
 	"Pedido.h"
 
-1605742065 source:c:\users\javie\desktop\github\edweb\gestionweb\src\pedido.cpp
+1605892298 source:c:\users\javie\desktop\github\edweb\gestionweb\src\pedido.cpp
 	"Pedido.h"
 	"iostream"
+	<string>
+	<string.h>
 
-1605741497 c:\users\javie\desktop\github\edweb\gestionweb\include\pedido.h
+1605892298 c:\users\javie\desktop\github\edweb\gestionweb\include\pedido.h
 	<string.h>
 	<string>
 

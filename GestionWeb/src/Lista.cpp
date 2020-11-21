@@ -1,5 +1,6 @@
 #include "Lista.h"
 #include "iostream"
+#include "Pedido.h"
 Lista::Lista()
 {
     primero = NULL;
@@ -12,7 +13,7 @@ Lista::~Lista()
     //dtor
 }
 
-void Lista::insertarIzq(int p){
+void Lista::insertarIzq(Pedido p){
     pnodo nuevo = new Nodo(p);
     if(es_vacia()){
         primero = nuevo;
@@ -25,7 +26,7 @@ void Lista::insertarIzq(int p){
     longitud++;
 }
 
-void Lista::insertarDer(int p){
+void Lista::insertarDer(Pedido p){
     pnodo nuevo = new Nodo(p);
     if(es_vacia()){
         primero = nuevo;
@@ -38,8 +39,24 @@ void Lista::insertarDer(int p){
     }
     longitud++;
 }
-void Lista::insertarOrdenado(int p){
+void Lista::insertarOrdenado(Pedido p){
+    if(!es_vacia()){
 
+        Nodo *nuevo = new Nodo(p);
+        Nodo *aux = ultimo;
+        if(ultimo->ped.getPrioridad()==p.getPrioridad()){
+            insertarDer(p);
+        }
+        else{
+            //Utilizando un puntero auxiliar buscamos la posición que tenga la misma prioridad que nuestro elemento a insertar.
+            while(aux->siguiente->ped.getPrioridad()!=p.getPrioridad()){
+                    aux = aux->siguiente;
+            }
+            //Al encontrarlo colocamos el nuevo Nodo entre auxiliar y el siguiente a auxiliar
+            nuevo->siguiente = aux->siguiente;
+            aux->siguiente = nuevo;
+        }
+        longitud++;
 }
 
 void Lista::resto(){
@@ -83,10 +100,10 @@ void Lista::eult(){
 bool Lista::es_vacia(){
     return(longitud == 0);
 }
-int Lista::prim(){
+Pedido Lista::prim(){
     return primero->ped;
 }
-int Lista::ult(){
+Pedido Lista::ult(){
     return ultimo->ped;
 }
 int Lista::lon(){
@@ -95,7 +112,7 @@ int Lista::lon(){
 void Lista::verLista(){
     pnodo aux = primero;
     while(aux != NULL){
-        cout << aux->ped << endl;
+        aux->ped.to_string();
         cout << "-------------------" << endl;
         aux = aux->siguiente;   //poner ped.to_string
     }

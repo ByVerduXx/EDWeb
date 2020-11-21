@@ -8,6 +8,7 @@ using namespace std;
 int main()
 {
     cout << "Hola buenas tardes" << endl;
+    /*
     Lista l;
     l.insertarIzq(3);
     l.insertarDer(4);
@@ -32,6 +33,7 @@ int main()
     f.encolar(1);
     f.encolar(2);
     f.verCola();
+    */
     return 0;
 }
 // Inserta por la izquierda, muestra prim y ult y resto , derecha ok

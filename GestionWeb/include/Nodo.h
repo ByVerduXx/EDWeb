@@ -6,12 +6,12 @@
 class Nodo
 {
     public:
-        Nodo(int p,Nodo *sig = NULL);
+        Nodo(Pedido p,Nodo *sig = NULL);
         ~Nodo();
 
 
     private:
-        int ped;
+        Pedido ped;
         Nodo *siguiente;
         friend class Pila;
         friend class Cola;

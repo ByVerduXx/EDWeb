@@ -1,6 +1,7 @@
 #include "Nodo.h"
+#include "Pedido.h"
 
-Nodo::Nodo(int p,Nodo *sig)
+Nodo::Nodo(Pedido p,Nodo *sig)
 {
     ped = p;
     siguiente = sig;

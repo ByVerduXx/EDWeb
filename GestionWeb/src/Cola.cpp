@@ -1,5 +1,6 @@
 #include "Cola.h"
 #include <iostream>
+#include "Pedido.h"
 Cola::Cola()
 {
     primero = NULL;
@@ -12,7 +13,7 @@ Cola::~Cola()
 {
     //dtor
 }
-void Cola::encolar(int p){
+void Cola::encolar(Pedido p){
     pnodo nuevo = new Nodo(p);
     if(esVacia()){
         primero = nuevo;
@@ -41,10 +42,10 @@ void Cola::desencolar(){
         longitud--;
     }
 }
-int Cola::prim(){
+Pedido Cola::prim(){
     return primero->ped;
 }
-int Cola::ult(){
+Pedido Cola::ult(){
     return ultimo->ped;
 }
 bool Cola::esVacia(){
@@ -53,7 +54,7 @@ bool Cola::esVacia(){
 void Cola::verCola(){
     pnodo aux = primero;
     while(aux != NULL){
-        cout << aux->ped << endl;                               //implementar pediodos es ped.to_string
+        aux->ped.to_string();
         cout << "-------------------" << endl;
         aux = aux->siguiente;
     }

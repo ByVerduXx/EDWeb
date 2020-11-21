@@ -8,11 +8,11 @@ class Cola
     public:
         Cola();
         ~Cola();
-        void encolar(int p);
-        void desencolar();
-        int prim();
-        int ult();
-        bool esVacia();
+        void encolar(Pedido p); //Añade un elemento al final de la cola
+        void desencolar(); //Elimina el primer elemento de la cola
+        Pedido prim(); //Devuelve el primer elemento de la cola
+        Pedido ult(); //Devuelve el último elemento de la cola
+        bool esVacia(); //Comprueba si la cola es vacia
         void verCola();  //funcion hecha con fines de comprension de la practica
     private:
         pnodo primero;

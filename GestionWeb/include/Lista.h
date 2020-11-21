@@ -10,20 +10,20 @@ class Lista
         Lista();
         virtual ~Lista();
         //Operaciones
-        void insertarIzq(int p); //Añade un pedido por la izquierda
-        void insertarDer(int p); //Añade un pedido por la derecha
-        void insertarOrdenado(int p);//Inserta un pedido a más derecha de su tipo
-        void resto();//Elimina el primero elemento de la lista
-        void eult(); //Elimina el ultimo elemento de la lista
+        void insertarIzq(Pedido p); //Añade un pedido por la izquierda
+        void insertarDer(Pedido p); //Añade un pedido por la derecha
+        void insertarOrdenado(Pedido p);//Inserta un pedido a más derecha de su tipo
+        void resto();//Elimina el primero pedido de la lista
+        void eult(); //Elimina el ultimo pedido de la lista
         bool es_vacia();//Comprueba si una lista es vacia
-        int prim(); //Devuelve el primer elemento de la lista
-        int ult(); //Devuelve el ultimo elemento de la lista
+        Pedido prim(); //Devuelve el primer pedido de la lista
+        Pedido ult(); //Devuelve el último pedido de la lista
         int lon();//Devuelve la longitud de la lista
         void verLista(); //funcion hecha con fines de comprension de la practica
 
     private:
-        pnodo primero; //Puntero al primer elemento de la lista
-        pnodo ultimo;  //Puntero al ultimo elemento de la lista
+        pnodo primero;
+        pnodo ultimo;
         int longitud;  // Mide la longitud de la lista
 
 };

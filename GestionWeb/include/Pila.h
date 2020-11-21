@@ -9,11 +9,11 @@ class Pila
         Pila();
         ~Pila();
         bool esVacia();
-        void apilar(int p);
+        void apilar(Pedido p);
         void desapilar();
-        int mostrarCima(); //cambiar int por pedido cuando se implemente
-        void apilarOrdenado(int p);   //falta implementar cuando esten los pedidos
-        void verPila(); //funcion hecha solo para fines de comprension de la practica
+        Pedido mostrarCima();
+        void apilarOrdenado(Pedido p);
+        void verPila(); //funcion hecha solo para fines de comprension de la práctica
     private:
         pnodo cima;
 };

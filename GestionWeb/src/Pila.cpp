@@ -11,7 +11,8 @@ Pila::~Pila()
 }
 
 bool Pila::esVacia(){return cima == NULL;}
-void Pila::apilar(int p){
+
+void Pila::apilar(Pedido p){
     pnodo nuevo = new Nodo(p,cima);
     cima = nuevo;
 }
@@ -23,13 +24,13 @@ void Pila::desapilar(){
         delete(borrar);
     }
 }
-int Pila::mostrarCima(){
+Pedido Pila::mostrarCima(){
     return cima->ped;
 }
 void Pila::verPila(){
     pnodo aux = cima;
     while(aux != NULL){
-        cout << aux->ped << endl;//cambiar a ped.to_string una vez hayamos implementado los pedidos
+        aux->ped.to_string();
         cout << "-------------------" << endl;
         aux = aux->siguiente;
     }
