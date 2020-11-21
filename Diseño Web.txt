@@ -1,0 +1,19 @@
+#include "Pedido.h"
+#include "Pila.h"
+#include "Cola.h"
+#include "Lista.h"
+Clase: Web
+
+	public:
+	void generarAleatorio(int cantidad); //Añade de una lista pedidos aleatorios al sistema
+	void introducirPedidos(); //Añade manualmente tantos pedidos como se desee Pulsar Q para salir del procedimiento
+	void introducirTxt(datos.txt) //Lee un txt e introduce todos los pedidos al sistema;
+	void simulador()//Inicia el simulador pasando el tiempo y enviando paquetes (eliminandolos del sistema);
+	void pasartiempo()//Pasa una unidad de tiempo del simulador  
+
+	private:
+	Pila pilaError;
+	Cola colaReg;
+	Cola colaNR;
+	Lista listaEnviar();
+	int tiempoTotal; //Inicializa a 0 y es el tiempo total de todos los pedidos del sistema
