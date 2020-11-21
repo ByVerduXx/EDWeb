@@ -1,6 +1,10 @@
 # depslib dependency file v1.0
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 1605727377 source:c:\users\dani\documents\github\edweb\gestionweb\main.cpp
+=======
+1605825241 source:c:\users\dani\documents\github\edweb\gestionweb\main.cpp
+>>>>>>> Stashed changes
 =======
 1605825241 source:c:\users\dani\documents\github\edweb\gestionweb\main.cpp
 >>>>>>> Stashed changes
@@ -90,5 +94,8 @@
 	"iostream"
 	<string>
 	<string.h>
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 
