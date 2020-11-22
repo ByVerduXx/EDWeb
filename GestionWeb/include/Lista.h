@@ -22,6 +22,7 @@ class Lista
         void verLista(); //funcion hecha con fines de comprension de la practica
 
     private:
+        //Atributos
         pnodo primero;
         pnodo ultimo;
         int longitud;  // Mide la longitud de la lista

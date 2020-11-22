@@ -30,6 +30,7 @@ class Pedido
         friend class Pila;
         friend class Cola;
         friend class Lista;
+        friend class Web;
 };
 
 #endif // PEDIDO_H

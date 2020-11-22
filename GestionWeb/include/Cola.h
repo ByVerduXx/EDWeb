@@ -6,8 +6,10 @@
 class Cola
 {
     public:
+        //Constructores
         Cola();
         ~Cola();
+        //Operaciones
         void encolar(Pedido p); //Añade un elemento al final de la cola
         void desencolar(); //Elimina el primer elemento de la cola
         Pedido prim(); //Devuelve el primer elemento de la cola
@@ -15,6 +17,7 @@ class Cola
         bool esVacia(); //Comprueba si la cola es vacia
         void verCola();  //funcion hecha con fines de comprension de la practica
     private:
+        //Atributos
         pnodo primero;
         pnodo ultimo;
         int longitud;
