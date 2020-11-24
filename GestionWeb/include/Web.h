@@ -15,8 +15,9 @@ class Web
         void introducirPedido(Pedido p); //Introduce un pedido en el sistema.
         void introducirTxt(); //Lee un txt e introduce todos los pedidos en el sistema.
         void pasarTiempo(); //Simula el paso del tiempo y no termina hasta que todo este enviado.
-
     private:
+        //Operación auxiliar privada
+        void incluirColaEnvios(Cola c , int n);//Introduce n pedidos correctos a listaEnviar enviando los errones a pilaErroneos
         //Atributos
         Pila pilaErroneos;
         Cola colaReg;
