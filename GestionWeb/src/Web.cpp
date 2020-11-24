@@ -18,7 +18,7 @@ void Web::introducirPedido(Pedido p){
     //pilaErroneos.apilarOrdenado(p);
  }
  else{
-    if(p.prioridad ==2 || p.prioridad==1){
+    if(p.prioridad == 2 || p.prioridad== 1){
         colaReg.encolar(p);
     }
     else{
@@ -32,8 +32,10 @@ void Web::introducirTxt(){
     string str;
     while(!fe.eof()){
         getline(fe,str);
-        Pedido p = Pedido(str);
-        introducirPedido(p);
+        if(!str.empty()){
+            Pedido p = Pedido(str);
+            introducirPedido(p);
+        }
     }
     fe.close();
 

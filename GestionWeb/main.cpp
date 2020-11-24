@@ -3,39 +3,25 @@
 #include "Pila.h"
 #include "Cola.h"
 #include "Lista.h"
+
+#include<fstream>
+#include<cstdlib>
 using namespace std;
 
 int main()
 {
     cout << "Hola buenas tardes" << endl;
-    /*
-    Lista l;
-    l.insertarIzq(3);
-    l.insertarDer(4);
-    l.verLista();
-    l.eult();
-    cout << l.es_vacia() << endl;
-    l.resto();
-    cout << l.es_vacia() << endl;
-    Pedido p = Pedido("Ordenador","Dani","Calle 1","VIP","1234567890",9);
-    p.to_string();
-    Pedido t = p;
-    cout << "----------------------------------" << endl;
-    t.to_string();
+    ifstream fe("Pedidos.txt");
+    string str;
 
-    Pila xd;
-    xd.apilar(1);
-    xd.apilar(5);
-    xd.verPila();
-
-    Cola f;
-    f.encolar(4);
-    f.encolar(1);
-    f.encolar(2);
-    f.verCola();
-    */
-    Pedido p = Pedido("Ordenador//Dani//Calle 32//xd//124352362626//5");
+    while(!fe.eof()){
+        getline(fe,str);
+        if(!str.empty()){
+            cout<<str<<endl;
+        }
+    }
+    fe.close();
+    Pedido p = Pedido("Ordenador//Dani//Calle 32//Prueba//124352362626//5");
     p.to_string();
     return 0;
 }
-// Inserta por la izquierda, muestra prim y ult y resto , derecha ok

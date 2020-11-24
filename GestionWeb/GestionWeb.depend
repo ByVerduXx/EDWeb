@@ -31,12 +31,14 @@
 	"Nodo.h"
 	"Pedido.h"
 
-1605976797 source:c:\users\javie\desktop\github\edweb\gestionweb\main.cpp
+1606216745 source:c:\users\javie\desktop\github\edweb\gestionweb\main.cpp
 	<iostream>
 	"Nodo.h"
 	"Pila.h"
 	"Cola.h"
 	"Lista.h"
+	<fstream>
+	<cstdlib>
 
 1605971380 c:\users\javie\desktop\github\edweb\gestionweb\include\nodo.h
 	<iostream>
@@ -101,7 +103,7 @@
 	<string>
 	<string.h>
 
-1606080125 source:c:\users\javie\desktop\github\edweb\gestionweb\src\web.cpp
+1606216678 source:c:\users\javie\desktop\github\edweb\gestionweb\src\web.cpp
 	"Web.h"
 	<fstream>
 	<string>
