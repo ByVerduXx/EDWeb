@@ -22,6 +22,6 @@ int main()
     }
     fe.close();
     Pedido p = Pedido("Ordenador//Dani//Calle 32//Prueba//124352362626//5");
-    p.to_string();
+    p.toStr();
     return 0;
 }
