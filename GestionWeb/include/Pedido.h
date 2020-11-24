@@ -16,7 +16,7 @@ class Pedido
         //Operaciones
         string getTipo(); //Devuelve el tipo de pedido
         int getPrioridad(); //Devuelve la prioridad del pedido siendo VIP=2 NVI=1 NR=0
-        void to_string();     //Muestratodo el pedido
+        void toStr();     //Muestratodo el pedido
     private:
         string nombre;
         string ncliente;

@@ -112,7 +112,7 @@ int Lista::lon(){
 void Lista::verLista(){
     pnodo aux = primero;
     while(aux != NULL){
-        aux->ped.to_string();
+        aux->ped.toStr();
         cout << "-------------------" << endl;
         aux = aux->siguiente;   //poner ped.to_string
     }

@@ -1,10 +1,12 @@
 # depslib dependency file v1.0
-1605975580 source:c:\users\dani\documents\github\edweb\gestionweb\main.cpp
+1606221843 source:c:\users\dani\documents\github\edweb\gestionweb\main.cpp
 	<iostream>
 	"Nodo.h"
 	"Pila.h"
 	"Cola.h"
 	"Lista.h"
+	<fstream>
+	<cstdlib>
 
 1605973578 source:c:\users\dani\documents\github\edweb\gestionweb\src\nodo.cpp
 	"Nodo.h"
@@ -14,7 +16,7 @@
 	<iostream>
 	"Pedido.h"
 
-1605973578 source:c:\users\dani\documents\github\edweb\gestionweb\src\pila.cpp
+1606221986 source:c:\users\dani\documents\github\edweb\gestionweb\src\pila.cpp
 	"Pila.h"
 	<iostream>
 
@@ -22,12 +24,12 @@
 	"Nodo.h"
 	"Pedido.h"
 
-1605973578 source:c:\users\dani\documents\github\edweb\gestionweb\src\cola.cpp
+1606221965 source:c:\users\dani\documents\github\edweb\gestionweb\src\cola.cpp
 	"Cola.h"
 	<iostream>
 	"Pedido.h"
 
-1605973578 c:\users\dani\documents\github\edweb\gestionweb\include\cola.h
+1606216169 c:\users\dani\documents\github\edweb\gestionweb\include\cola.h
 	"Nodo.h"
 	"Pedido.h"
 
@@ -74,12 +76,12 @@
 	"Nodo.h"
 	"Pedido.h"
 
-1605973839 source:c:\users\dani\documents\github\edweb\gestionweb\src\lista.cpp
+1606221975 source:c:\users\dani\documents\github\edweb\gestionweb\src\lista.cpp
 	"Lista.h"
 	"iostream"
 	"Pedido.h"
 
-1605973578 c:\users\dani\documents\github\edweb\gestionweb\include\lista.h
+1606216169 c:\users\dani\documents\github\edweb\gestionweb\include\lista.h
 	"Nodo.h"
 	"Pedido.h"
 
@@ -93,15 +95,17 @@
 	<string.h>
 	<string>
 
-1605973728 c:\users\dani\documents\github\edweb\gestionweb\include\pedido.h
+1606221773 c:\users\dani\documents\github\edweb\gestionweb\include\pedido.h
 	<string.h>
 	<string>
 
-1605975473 source:c:\users\dani\documents\github\edweb\gestionweb\src\pedido.cpp
+1606221915 source:c:\users\dani\documents\github\edweb\gestionweb\src\pedido.cpp
 	"Pedido.h"
 	"iostream"
 	<string>
 	<string.h>
+	<cstdlib>
+	<ctime>
 
 1606216678 source:c:\users\javie\desktop\github\edweb\gestionweb\src\web.cpp
 	"Web.h"
@@ -110,6 +114,18 @@
 	<cstdlib>
 
 1606075735 c:\users\javie\desktop\github\edweb\gestionweb\include\web.h
+	"Pedido.h"
+	"Pila.h"
+	"Cola.h"
+	"Lista.h"
+
+1606216868 source:c:\users\dani\documents\github\edweb\gestionweb\src\web.cpp
+	"Web.h"
+	<fstream>
+	<string>
+	<cstdlib>
+
+1606216169 c:\users\dani\documents\github\edweb\gestionweb\include\web.h
 	"Pedido.h"
 	"Pila.h"
 	"Cola.h"

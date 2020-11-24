@@ -54,7 +54,7 @@ bool Cola::esVacia(){
 void Cola::verCola(){
     pnodo aux = primero;
     while(aux != NULL){
-        aux->ped.to_string();
+        aux->ped.toStr();
         cout << "-------------------" << endl;
         aux = aux->siguiente;
     }

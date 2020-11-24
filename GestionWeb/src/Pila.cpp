@@ -30,7 +30,7 @@ Pedido Pila::mostrarCima(){
 void Pila::verPila(){
     pnodo aux = cima;
     while(aux != NULL){
-        aux->ped.to_string();
+        aux->ped.toStr();
         cout << "-------------------" << endl;
         aux = aux->siguiente;
     }
