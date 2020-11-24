@@ -71,8 +71,7 @@ void Web::pasarTiempo(){
         }
         //El pedido ha sido enviado y por tanto mostramos los datos de este y lo eliminamos del sistema
         cout<<"El pedido ha sido enviado."<<endl;
-        //Cambiar luego a toStr()
-        listaEnviar.prim().to_string();
+        listaEnviar.prim().toStr();
         listaEnviar.resto();
         //Incluimos nuevos pedidos teniendo 3 casos
         incluirColaEnvios(colaReg,3);

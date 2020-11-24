@@ -33,7 +33,7 @@
 	"Nodo.h"
 	"Pedido.h"
 
-1606216745 source:c:\users\javie\desktop\github\edweb\gestionweb\main.cpp
+1606223337 source:c:\users\javie\desktop\github\edweb\gestionweb\main.cpp
 	<iostream>
 	"Nodo.h"
 	"Pila.h"
@@ -50,7 +50,7 @@
 	"Nodo.h"
 	"Pedido.h"
 
-1605971450 source:c:\users\javie\desktop\github\edweb\gestionweb\src\cola.cpp
+1606223337 source:c:\users\javie\desktop\github\edweb\gestionweb\src\cola.cpp
 	"Cola.h"
 	<iostream>
 	"Pedido.h"
@@ -63,11 +63,11 @@
 	"Nodo.h"
 	"Pedido.h"
 
-1605973117 source:c:\users\javie\desktop\github\edweb\gestionweb\src\pila.cpp
+1606223337 source:c:\users\javie\desktop\github\edweb\gestionweb\src\pila.cpp
 	"Pila.h"
 	<iostream>
 
-1605974864 source:c:\users\javie\desktop\github\edweb\gestionweb\src\lista.cpp
+1606223337 source:c:\users\javie\desktop\github\edweb\gestionweb\src\lista.cpp
 	"Lista.h"
 	"iostream"
 	"Pedido.h"
@@ -85,13 +85,15 @@
 	"Nodo.h"
 	"Pedido.h"
 
-1605977876 source:c:\users\javie\desktop\github\edweb\gestionweb\src\pedido.cpp
+1606223337 source:c:\users\javie\desktop\github\edweb\gestionweb\src\pedido.cpp
 	"Pedido.h"
 	"iostream"
 	<string>
 	<string.h>
+	<cstdlib>
+	<ctime>
 
-1606077387 c:\users\javie\desktop\github\edweb\gestionweb\include\pedido.h
+1606223337 c:\users\javie\desktop\github\edweb\gestionweb\include\pedido.h
 	<string.h>
 	<string>
 
@@ -107,13 +109,13 @@
 	<cstdlib>
 	<ctime>
 
-1606216678 source:c:\users\javie\desktop\github\edweb\gestionweb\src\web.cpp
+1606223304 source:c:\users\javie\desktop\github\edweb\gestionweb\src\web.cpp
 	"Web.h"
 	<fstream>
 	<string>
 	<cstdlib>
 
-1606075735 c:\users\javie\desktop\github\edweb\gestionweb\include\web.h
+1606219207 c:\users\javie\desktop\github\edweb\gestionweb\include\web.h
 	"Pedido.h"
 	"Pila.h"
 	"Cola.h"
