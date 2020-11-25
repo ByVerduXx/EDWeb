@@ -3,6 +3,7 @@
 #include<fstream>
 #include<string>
 #include<cstdlib>
+
 Web::Web()
 {
     //ctor
@@ -15,10 +16,10 @@ Web::~Web()
 
 void Web::introducirPedido(Pedido p){
  if(p.erroneo){
-    //pilaErroneos.apilarOrdenado(p);
+    pilaErroneos.apilarOrdenado(p);
  }
  else{
-    if(p.prioridad == 2 || p.prioridad== 1){
+    if(p.prioridad == 2 || p.prioridad == 1){
         colaReg.encolar(p);
     }
     else{

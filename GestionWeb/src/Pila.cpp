@@ -16,6 +16,26 @@ void Pila::apilar(Pedido p){
     pnodo nuevo = new Nodo(p,cima);
     cima = nuevo;
 }
+void Pila::apilarOrdenado(Pedido p){
+    Pila aux;
+    if(esVacia()){
+        apilar(p);
+    }
+    else if(p.prioridad >= cima->ped.prioridad){
+        apilar(p);
+    }
+    else{
+        while(p.prioridad < cima->ped.prioridad){
+            aux.apilar(cima->ped);
+            desapilar();
+        }
+        apilar(p);
+        while(!aux.esVacia()){
+            apilar(aux.cima->ped);
+            aux.desapilar();
+        }
+    }
+}
 void Pila::desapilar(){
     pnodo borrar;
     if(cima){
