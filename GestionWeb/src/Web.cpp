@@ -28,21 +28,23 @@ void Web::introducirPedido(Pedido p){
  }
 }
 
-void Web::introducirTxt(){
+int Web::introducirTxt(){
     ifstream fe("Pedidos.txt");
     string str;
+    int contador = 0;
     while(!fe.eof()){
         getline(fe,str);
         if(!str.empty()){
             Pedido p = Pedido(str);
             introducirPedido(p);
+            contador++;
         }
     }
-    fe.close();
+    return contador;
 
 }
 
-void Web::incluirColaEnvios(Cola c, int n){
+void Web::incluirColaEnvios(Cola c, int n){                             //revisa esta funcion que esta un poco pocha(incluyendo el nombre de la funcion xd)
     int contador;
     while(contador<n && !c.esVacia()){
         if(c.prim().erroneo){
@@ -100,4 +102,10 @@ void Web::pasarTiempo(){
         }
 
     }
+}
+void Web::mostrarColas(){
+    cout << "Cola de Registrados:\n";
+    colaReg.verCola();
+    cout << "\nCola de No Registrados\n";
+    colaNR.verCola();
 }

@@ -13,6 +13,27 @@ string NR ="NR";
 Pedido::Pedido(){
 
 }
+Pedido::Pedido(string n, string c, string d , string tp , string tj, int t){
+    nombre = n;
+    ncliente = c;
+    direccion = d;
+    tipo = tp;
+    tarjeta = tj;
+    tiempo = t;
+    erroneo = false;
+
+    if(strcmp(VIP.c_str(),tipo.c_str()) == 0){
+            prioridad = 2;
+
+    }
+    else if (strcmp(NVIP.c_str(),tipo.c_str()) == 0){
+            prioridad = 1;
+    }
+    else if(strcmp(NR.c_str(),tipo.c_str()) == 0){
+            prioridad = 0;
+    }
+
+}
 Pedido::Pedido(string datos)
 {
 
