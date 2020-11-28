@@ -52,6 +52,8 @@ int main()
             for(int i=0;i<10-num;i++){
                 gestor.introducirPedido(listaP[i]);
             }
+            cout << "Los pedidos han sido introducidos correctamente al sistema." << endl;
+            cout << "------------------------------" << endl;
             system("pause");
             system("cls");
         }
@@ -76,11 +78,21 @@ int main()
         system("pause");
         cout << "Los pedidos han sido introducidos correctamente al sistema." << endl;
         cout << "------------------------------" << endl;
+        system("pause");
+        system("cls");
     }
     cout << "A continuacion la simulacion comenzara." << endl;
     cout << "------------------------------" << endl;
+    cout << "Vamos a ver primero como están las estructuras de datos de la web." << endl;
+    cout << "Obviamente solo van a estar llenas las colas, porque todavia no hemos hecho nada mas que introducir los pedidos al sistema." << endl;
+    cout << "\n";
+    gestor.mostrarColas();
+    system("pause");
+    system("cls");
+    gestor.mostrarLista();
+    gestor.mostrarPila();
+    system("pause");
+    system("cls");
     gestor.pasarTiempo();
-
-
     return 0;
 }
