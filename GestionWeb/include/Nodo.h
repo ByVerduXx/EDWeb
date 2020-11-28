@@ -16,6 +16,8 @@ class Nodo
         friend class Pila;
         friend class Cola;
         friend class Lista;
+        friend class Pedido;
+        friend class Web;
 
 };
 typedef Nodo *pnodo;

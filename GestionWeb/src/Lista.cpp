@@ -114,6 +114,6 @@ void Lista::verLista(){
     while(aux != NULL){
         aux->ped.toStr();
         cout << "-------------------" << endl;
-        aux = aux->siguiente;   //poner ped.to_string
+        aux = aux->siguiente;
     }
 }

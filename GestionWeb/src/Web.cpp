@@ -14,7 +14,7 @@ Web::~Web()
     //dtor
 }
 
-void Web::introducirPedido(Pedido p){ //No sale de aqui la 3º vuelta y no se por que
+void Web::introducirPedido(Pedido p){
     if(p.prioridad == 2 || p.prioridad == 1){
         colaReg.encolar(p);
     }
@@ -24,7 +24,7 @@ void Web::introducirPedido(Pedido p){ //No sale de aqui la 3º vuelta y no se por
 }
 
 
-int Web::introducirTxt(){ //Salir sale del bucle solo que al 3º pedido no muestra el contador y no se si se cierra el fichero
+int Web::introducirTxt(){
     ifstream fe("Pedidos.txt");
     string str;
     int contador = 0;
@@ -44,8 +44,11 @@ int Web::introducirTxt(){ //Salir sale del bucle solo que al 3º pedido no muestr
 void Web::incluirListaEnvios(Cola c, int n){ //ERROR
     int contador=0;
     cout<<"ENTRA"<<endl;
+    cout<<colaReg.esVacia()<<endl;
     while(contador<n && !c.esVacia()){
-        cout<<c.prim().erroneo<<endl;
+                cout<<"ENTRA2"<<endl;
+                cout<<c.prim().erroneo<<endl;
+                //Algo le pasa al primero de la cola
         if(c.prim().erroneo){
              cout<<"ERRONEO"<<endl;
             pilaErroneos.apilar(c.prim());
@@ -62,6 +65,7 @@ void Web::incluirListaEnvios(Cola c, int n){ //ERROR
 }
 
 void Web::pasarTiempo(){
+    colaReg.verCola();
     //Primero insertamos 3 pedidos correctos de usuarios registrados en listaEnviar
     incluirListaEnvios(colaReg,3);
     //Hacemos lo mismo pero 1 pedido de usuarios No registrados
@@ -86,7 +90,9 @@ void Web::pasarTiempo(){
 
         listaEnviar.resto();
         //Incluimos nuevos pedidos teniendo 3 casos
+        cout<<"ENTRA COLA REG"<<endl;
         incluirListaEnvios(colaReg,3);
+        cout<<"SALE COLA REG"<<endl;
         if(!pilaErroneos.esVacia()){
             //Caso 1
             if(pilaErroneos.mostrarCima().getPrioridad()!=0){
@@ -129,4 +135,13 @@ void Web::mostrarColas(){
     colaReg.verCola();
     cout << "\nCola de No Registrados\n";
     colaNR.verCola();
+}
+void Web::mostrarPila(){
+    cout<<"Pila erroneos:"<<endl;
+    pilaErroneos.verPila();
+}
+void Web::mostrarLista(){
+    cout<<"Lista enviar:"<<endl;
+    listaEnviar.verLista();
+
 }
