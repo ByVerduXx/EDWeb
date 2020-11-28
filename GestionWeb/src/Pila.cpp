@@ -25,7 +25,7 @@ void Pila::apilarOrdenado(Pedido p){
         apilar(p);
     }
     else{
-        while(p.prioridad < cima->ped.prioridad){
+        while(!esVacia() && p.prioridad < cima->ped.prioridad){
             aux.apilar(cima->ped);
             desapilar();
         }

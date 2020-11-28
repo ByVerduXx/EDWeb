@@ -41,8 +41,22 @@ int main()
     system("cls");
     if(n == 1){
         cout << "Vamos a proceder a leer los pedidos del fichero."<< endl;
-        int num = gestor.introducirTxt();  //aqui entra en un bucle infinito y no se por que
-        //cout << num;
+        int num = gestor.introducirTxt();
+        if(num<10){
+            cout << "------------------------------" << endl;
+            cout<<"Debido a que no hay suficientes pedidos en el TXT introducimos pedidos de prueba hasta cubrir el minimo de 10 pedidos."<<endl;
+            cout << "------------------------------" << endl;
+            system("pause");
+            system("cls");
+
+            for(int i=0;i<10-num;i++){
+                gestor.introducirPedido(listaP[i]);
+                listaP[i].toStr();
+                cout << "------------------------------" << endl;
+            }
+            system("pause");
+            system("cls");
+        }
 
     }
     else{
@@ -63,12 +77,10 @@ int main()
         }
         system("pause");
         cout << "Los pedidos han sido introducidos correctamente al sistema." << endl;
-
-
-
-
-
+        cout << "------------------------------" << endl;
     }
-
+    cout << "A continuacion la simulacion comenzara." << endl;
+    cout << "------------------------------" << endl;
+    gestor.pasarTiempo();
     return 0;
 }

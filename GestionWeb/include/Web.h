@@ -18,7 +18,7 @@ class Web
         void mostrarColas(); //funcion para ver las dos colas del sistema
     private:
         //Operación auxiliar privada
-        void incluirColaEnvios(Cola c , int n);//Introduce n pedidos correctos a listaEnviar enviando los errones a pilaErroneos
+        void incluirListaEnvios(Cola c , int n);//Introduce n pedidos correctos a listaEnviar enviando los errones a pilaErroneos
         //Atributos
         Pila pilaErroneos;
         Cola colaReg;

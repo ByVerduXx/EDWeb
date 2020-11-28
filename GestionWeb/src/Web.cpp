@@ -14,9 +14,10 @@ Web::~Web()
     //dtor
 }
 
-void Web::introducirPedido(Pedido p){
+void Web::introducirPedido(Pedido p){ //No sale de aqui la 3º vuelta y no se por que
  if(p.erroneo){
     pilaErroneos.apilarOrdenado(p);
+
  }
  else{
     if(p.prioridad == 2 || p.prioridad == 1){
@@ -28,7 +29,7 @@ void Web::introducirPedido(Pedido p){
  }
 }
 
-int Web::introducirTxt(){
+int Web::introducirTxt(){ //Salir sale del bucle solo que al 3º pedido no muestra el contador y no se si se cierra el fichero
     ifstream fe("Pedidos.txt");
     string str;
     int contador = 0;
@@ -40,30 +41,36 @@ int Web::introducirTxt(){
             contador++;
         }
     }
+    fe.close();
     return contador;
 
 }
 
-void Web::incluirColaEnvios(Cola c, int n){                             //revisa esta funcion que esta un poco pocha(incluyendo el nombre de la funcion xd)
-    int contador;
+void Web::incluirListaEnvios(Cola c, int n){ //ERROR
+    int contador=0;
+    cout<<"ENTRA"<<endl;
     while(contador<n && !c.esVacia()){
+        cout<<c.prim().erroneo<<endl;
         if(c.prim().erroneo){
+             cout<<"ERRONEO"<<endl;
             pilaErroneos.apilar(c.prim());
             c.desencolar();
         }
         else{
+            cout<<"LISTA"<<endl;
             listaEnviar.insertarDer(c.prim());
+            contador++;
             c.desencolar();
-            n++;
         }
     }
+    cout<<"SALE"<<endl;
 }
 
 void Web::pasarTiempo(){
     //Primero insertamos 3 pedidos correctos de usuarios registrados en listaEnviar
-    incluirColaEnvios(colaReg,3);
+    incluirListaEnvios(colaReg,3);
     //Hacemos lo mismo pero 1 pedido de usuarios No registrados
-    incluirColaEnvios(colaNR,1);
+    incluirListaEnvios(colaNR,1);
 
     char continuar = 'Y';
     while(!listaEnviar.es_vacia() && continuar != 'N'){
@@ -71,13 +78,20 @@ void Web::pasarTiempo(){
         while(t>0){
             cout<<"El pedido "<<listaEnviar.prim().nombre<<" esta preparandose, espere "<<t<<" minutos."<<endl;
             t--;
+            system("pause");
+            system("cls");
         }
         //El pedido ha sido enviado y por tanto mostramos los datos de este y lo eliminamos del sistema
         cout<<"El pedido ha sido enviado."<<endl;
+        cout<<"----------------------------------"<<endl;
         listaEnviar.prim().toStr();
+        cout<<"----------------------------------"<<endl;
+        system("pause");
+        system("cls");
+
         listaEnviar.resto();
         //Incluimos nuevos pedidos teniendo 3 casos
-        incluirColaEnvios(colaReg,3);
+        incluirListaEnvios(colaReg,3);
         if(!pilaErroneos.esVacia()){
             //Caso 1
             if(pilaErroneos.mostrarCima().getPrioridad()!=0){
@@ -86,7 +100,7 @@ void Web::pasarTiempo(){
             }
             //Caso 2
             else if(!colaNR.esVacia()){
-                incluirColaEnvios(colaNR,1);
+                incluirListaEnvios(colaNR,1);
             }
             //Caso 3
             else{
@@ -100,8 +114,12 @@ void Web::pasarTiempo(){
         if(continuar=='n'){
             continuar='N';
         }
+        else{
+            continuar='Y';
+        }
 
     }
+    cout<<"Todos los pedidos introducidos del sistema han sido enviados exitosamente."<<endl;
 }
 void Web::mostrarColas(){
     cout << "Cola de Registrados:\n";
