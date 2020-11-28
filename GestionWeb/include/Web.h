@@ -20,7 +20,7 @@ class Web
         void mostrarLista();
     private:
         //Operación auxiliar privada
-        void incluirListaEnvios(Cola c , int n);//Introduce n pedidos correctos a listaEnviar enviando los errones a pilaErroneos
+        void incluirListaEnvios(Cola& c , int n);//Introduce n pedidos correctos a listaEnviar enviando los errones a pilaErroneos
         //Atributos
         Pila pilaErroneos;
         Cola colaReg;

@@ -57,7 +57,6 @@ void Lista::insertarOrdenado(Pedido p){
     else{
         insertarIzq(p);
     }
-    longitud++;
 }
 void Lista::resto(){
     if(!es_vacia()){
@@ -110,6 +109,9 @@ int Lista::lon(){
     return longitud;
 }
 void Lista::verLista(){
+    if(es_vacia()){
+        cout<<"LISTA VACIA"<<endl;
+    }
     pnodo aux = primero;
     while(aux != NULL){
         aux->ped.toStr();

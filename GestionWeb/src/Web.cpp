@@ -41,36 +41,37 @@ int Web::introducirTxt(){
 
 }
 
-void Web::incluirListaEnvios(Cola c, int n){ //ERROR
+void Web::incluirListaEnvios(Cola& c, int n){
     int contador=0;
-    cout<<"ENTRA"<<endl;
-    cout<<colaReg.esVacia()<<endl;
     while(contador<n && !c.esVacia()){
-                cout<<"ENTRA2"<<endl;
-                cout<<c.prim().erroneo<<endl;
-                //Algo le pasa al primero de la cola
         if(c.prim().erroneo){
-             cout<<"ERRONEO"<<endl;
             pilaErroneos.apilar(c.prim());
             c.desencolar();
         }
         else{
-            cout<<"LISTA"<<endl;
             listaEnviar.insertarOrdenado(c.prim());
             contador++;
             c.desencolar();
         }
     }
-    cout<<"SALE"<<endl;
 }
 
 void Web::pasarTiempo(){
-    colaReg.verCola();
     //Primero insertamos 3 pedidos correctos de usuarios registrados en listaEnviar
     incluirListaEnvios(colaReg,3);
     //Hacemos lo mismo pero 1 pedido de usuarios No registrados
     incluirListaEnvios(colaNR,1);
 
+    cout<<"Estas son las estructuras de datos del sistema web:\n";
+    mostrarColas();
+    system("pause");
+    system("cls");
+    mostrarLista();
+    system("pause");
+    system("cls");
+    mostrarPila();
+    system("pause");
+    system("cls");
     char continuar = 'Y';
     while(!listaEnviar.es_vacia() && continuar != 'N'){
         int t = listaEnviar.prim().tiempo;
@@ -90,9 +91,7 @@ void Web::pasarTiempo(){
 
         listaEnviar.resto();
         //Incluimos nuevos pedidos teniendo 3 casos
-        cout<<"ENTRA COLA REG"<<endl;
         incluirListaEnvios(colaReg,3);
-        cout<<"SALE COLA REG"<<endl;
         if(!pilaErroneos.esVacia()){
             //Caso 1
             if(pilaErroneos.mostrarCima().getPrioridad()!=0){
@@ -112,18 +111,29 @@ void Web::pasarTiempo(){
         else{
             incluirListaEnvios(colaNR,1);
         }
-        //Después de realizar esto
-        cout<<"¿Quiere continuar al siguiente pedido?(Y:Si,N:No):";
-        cin>>continuar;
-        if(continuar=='n'){
-            continuar='N';
+        cout<<"Estas son las estructuras de datos del sistema web:\n";
+        mostrarColas();
+        system("pause");
+        system("cls");
+        mostrarLista();
+        system("pause");
+        system("cls");
+        mostrarPila();
+        system("pause");
+        system("cls");
+        if(!listaEnviar.es_vacia()){
+            //Después de realizar esto
+            cout<<"Quiere continuar al siguiente pedido?(Y:Si,N:No):";
+            cin>>continuar;
+            if(continuar=='n'){
+                continuar='N';
+            }
+            else{
+                continuar='Y';
+            }
         }
-        else{
-            continuar='Y';
-        }
-
     }
-    if(continuar != 'N'){
+    if(listaEnviar.es_vacia()){
         cout<<"Todos los pedidos introducidos del sistema han sido enviados exitosamente."<<endl;
     }
     else{
@@ -135,13 +145,16 @@ void Web::mostrarColas(){
     colaReg.verCola();
     cout << "\nCola de No Registrados\n";
     colaNR.verCola();
+    cout<<"\n";
 }
 void Web::mostrarPila(){
-    cout<<"Pila erroneos:"<<endl;
+    cout<<"Pila erroneos:\n";
     pilaErroneos.verPila();
+    cout<<"\n";
 }
 void Web::mostrarLista(){
-    cout<<"Lista enviar:"<<endl;
+    cout<<"Lista enviar:\n";
     listaEnviar.verLista();
+    cout<<"\n";
 
 }

@@ -20,13 +20,13 @@ int main()
     Pedido p1 = Pedido("Ordenador Portatil","Daniel Verduras Gallego","Calle de Alcala","VIP","123456789",7);
     Pedido p2 = Pedido("Teclado Gaming","Javier Alonso Lledo","Calle Madrid","NVIP","8273956235",2);
     Pedido p3 = Pedido("Raton 3.0","Pedro Sanchez","Moncloa","NR","386346783",9);
-    Pedido p4 = Pedido("Xiaomi MI A1","Pepe Perez","Puerta de Alcala","VIP","237346345636",1);
+    Pedido p4 = Pedido("Xiaomi MI A1//Pepe Perez//Puerta de Alcala//VIP//237346345636//hola"); //PEDIDO ERRONEO VIP
     Pedido p5 = Pedido("Monitor LG","Daniel Verduras Gallego","Calle de Alcala","VIP","123456789",3);
     Pedido p6 = Pedido("Zapatillas Nike","Javier Alonso Lledo","Calle Madrid","NVIP","8273956235",4);
     Pedido p7 = Pedido("Television 4K","Lucas Vazquez","Calle del Futbol","NR","464626245252",5);
     Pedido p8 = Pedido("CD Bad Bunny","David Fernandez","Calle Antonio Machado","NR","37346346346",6);
     Pedido p9 = Pedido("Camiseta Levis","Ruben Castro","Avenida Espartales","NR","923572972",8);
-    Pedido p10 = Pedido("Raqueta de Tenis","Raul Fando","Calle 69","NR","26452545",10);
+    Pedido p10 = Pedido("Raqueta de Tenis//Raul Fando//Calle 69//NR//1"); //PEDIDO ERRONEO NR
 
     Pedido listaP[] = {p1,p2,p3,p4,p5,p6,p7,p8,p9,p10}; //lista con pedidos realizados manualmente para completar el ejercicio
 
@@ -51,8 +51,6 @@ int main()
 
             for(int i=0;i<10-num;i++){
                 gestor.introducirPedido(listaP[i]);
-                listaP[i].toStr();
-                cout << "------------------------------" << endl;
             }
             system("pause");
             system("cls");

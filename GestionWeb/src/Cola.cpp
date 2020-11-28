@@ -52,6 +52,9 @@ bool Cola::esVacia(){
     return  (primero==NULL);
 }
 void Cola::verCola(){
+    if(esVacia()){
+        cout<<"COLA VACIA"<<endl;
+    }
     pnodo aux = primero;
     while(aux != NULL){
         aux->ped.toStr();

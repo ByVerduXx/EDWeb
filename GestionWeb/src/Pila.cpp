@@ -48,10 +48,14 @@ Pedido Pila::mostrarCima(){
     return cima->ped;
 }
 void Pila::verPila(){
+    if(esVacia()){
+        cout<<"PILA VACIA"<<endl;
+    }
     pnodo aux = cima;
     while(aux != NULL){
         aux->ped.toStr();
         cout << "-------------------" << endl;
         aux = aux->siguiente;
     }
+
 }

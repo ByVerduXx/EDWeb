@@ -170,4 +170,12 @@ void Pedido::toStr(){
     cout << "Tiempo de preparacion: " << tiempo << " minuto(s)" << endl;
     cout << "Tarjeta de credito: " << tarjeta << endl;
     cout << "Numero de prioridad: " << prioridad << endl;
+    string err;
+    if(erroneo){
+        err="SI";
+    }
+    else{
+        err="NO";
+    }
+    cout<<"Erroneo: "<<err<<endl;
 }
