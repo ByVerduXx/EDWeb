@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1606499391 source:c:\users\dani\documents\github\edweb\gestionweb\main.cpp
+1606570451 source:c:\users\dani\documents\github\edweb\gestionweb\main.cpp
 	<iostream>
 	"Nodo.h"
 	"Pila.h"
@@ -21,7 +21,7 @@
 	<iostream>
 	"Pedido.h"
 
-1606326181 source:c:\users\dani\documents\github\edweb\gestionweb\src\pila.cpp
+1606567031 source:c:\users\dani\documents\github\edweb\gestionweb\src\pila.cpp
 	"Pila.h"
 	<iostream>
 
@@ -86,7 +86,7 @@
 	"Nodo.h"
 	"Pedido.h"
 
-1606221975 source:c:\users\dani\documents\github\edweb\gestionweb\src\lista.cpp
+1606570342 source:c:\users\dani\documents\github\edweb\gestionweb\src\lista.cpp
 	"Lista.h"
 	"iostream"
 	"Pedido.h"
@@ -131,13 +131,13 @@
 	"Cola.h"
 	"Lista.h"
 
-1606499676 source:c:\users\dani\documents\github\edweb\gestionweb\src\web.cpp
+1606569565 source:c:\users\dani\documents\github\edweb\gestionweb\src\web.cpp
 	"Web.h"
 	<fstream>
 	<string>
 	<cstdlib>
 
-1606499754 c:\users\dani\documents\github\edweb\gestionweb\include\web.h
+1606567031 c:\users\dani\documents\github\edweb\gestionweb\include\web.h
 	"Pedido.h"
 	"Pila.h"
 	"Cola.h"

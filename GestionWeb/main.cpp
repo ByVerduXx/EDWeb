@@ -82,5 +82,7 @@ int main()
     cout << "A continuacion la simulacion comenzara." << endl;
     cout << "------------------------------" << endl;
     gestor.pasarTiempo();
+
+
     return 0;
 }

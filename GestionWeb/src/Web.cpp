@@ -15,19 +15,14 @@ Web::~Web()
 }
 
 void Web::introducirPedido(Pedido p){ //No sale de aqui la 3º vuelta y no se por que
- if(p.erroneo){
-    pilaErroneos.apilarOrdenado(p);
-
- }
- else{
     if(p.prioridad == 2 || p.prioridad == 1){
         colaReg.encolar(p);
     }
     else{
         colaNR.encolar(p);
     }
- }
 }
+
 
 int Web::introducirTxt(){ //Salir sale del bucle solo que al 3º pedido no muestra el contador y no se si se cierra el fichero
     ifstream fe("Pedidos.txt");
@@ -58,7 +53,7 @@ void Web::incluirListaEnvios(Cola c, int n){ //ERROR
         }
         else{
             cout<<"LISTA"<<endl;
-            listaEnviar.insertarDer(c.prim());
+            listaEnviar.insertarOrdenado(c.prim());
             contador++;
             c.desencolar();
         }
@@ -95,7 +90,7 @@ void Web::pasarTiempo(){
         if(!pilaErroneos.esVacia()){
             //Caso 1
             if(pilaErroneos.mostrarCima().getPrioridad()!=0){
-                listaEnviar.insertarDer(pilaErroneos.mostrarCima());
+                listaEnviar.insertarOrdenado(pilaErroneos.mostrarCima());
                 pilaErroneos.desapilar();
             }
             //Caso 2
@@ -104,9 +99,12 @@ void Web::pasarTiempo(){
             }
             //Caso 3
             else{
-                listaEnviar.insertarDer(pilaErroneos.mostrarCima());
+                listaEnviar.insertarOrdenado(pilaErroneos.mostrarCima());
                 pilaErroneos.desapilar();
             }
+        }
+        else{
+            incluirListaEnvios(colaNR,1);
         }
         //Después de realizar esto
         cout<<"¿Quiere continuar al siguiente pedido?(Y:Si,N:No):";
@@ -119,7 +117,12 @@ void Web::pasarTiempo(){
         }
 
     }
-    cout<<"Todos los pedidos introducidos del sistema han sido enviados exitosamente."<<endl;
+    if(continuar != 'N'){
+        cout<<"Todos los pedidos introducidos del sistema han sido enviados exitosamente."<<endl;
+    }
+    else{
+       cout<<"Se ha parado el procesado de pedidos, aunque hay pedidos pendientes de envío."<<endl;
+    }
 }
 void Web::mostrarColas(){
     cout << "Cola de Registrados:\n";

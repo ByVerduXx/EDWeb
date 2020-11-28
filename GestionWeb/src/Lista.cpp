@@ -21,7 +21,7 @@ void Lista::insertarIzq(Pedido p){
     }
     else{
         nuevo->siguiente = primero;
-        primero= nuevo;
+        primero = nuevo;
     }
     longitud++;
 }
@@ -35,29 +35,29 @@ void Lista::insertarDer(Pedido p){
     else{
         ultimo->siguiente = nuevo;
         nuevo->siguiente = NULL;
-        ultimo= nuevo;
+        ultimo = nuevo;
     }
     longitud++;
 }
 void Lista::insertarOrdenado(Pedido p){
     if(!es_vacia()){
-
-        Nodo *nuevo = new Nodo(p);
-        Nodo *aux = ultimo;
-        if(ultimo->ped.getPrioridad()==p.getPrioridad()){
+        if(ultimo->ped.getPrioridad()>= p.getPrioridad()){
             insertarDer(p);
         }
-        else{
-            //Utilizando un puntero auxiliar buscamos la posición que tenga la misma prioridad que nuestro elemento a insertar.
-            while(aux->siguiente->ped.getPrioridad()!=p.getPrioridad()){
-                    aux = aux->siguiente;
-            }
-            //Al encontrarlo colocamos el nuevo Nodo entre auxiliar y el siguiente a auxiliar
-            nuevo->siguiente = aux->siguiente;
-            aux->siguiente = nuevo;
+        else if(primero->ped.getPrioridad() < p.getPrioridad()){
+            insertarIzq(p);
         }
-        longitud++;
+        else{
+            Pedido aux = primero->ped;
+            resto();
+            insertarOrdenado(p);
+            insertarIzq(aux);
+        }
     }
+    else{
+        insertarIzq(p);
+    }
+    longitud++;
 }
 void Lista::resto(){
     if(!es_vacia()){
