@@ -1,6 +1,0 @@
-Caso 1: que falte algun elemento del string Ej:    nombre//nombreproducto//VIP     (omision de elemtnos) {mientras !sea vacio string} si el contador no llega a 5 Pedido("nombre","nombreproducto","VIP","NR","numero random",tiempo random)
-
-Caso 2: que el tiempo no sea un numero valido Ej: nomnbre//nombreC//direcc//VIP//12345678904//hola  (tiempo erroneo) {try catch}
-
-Caso 3: que el tipo de cliente no coincida con lo establecido (VIP,NVIP,NR) (ARREGLADO!!!!)
-
